@@ -59,6 +59,8 @@ elixir(function(mix) {
 
     .copy('./node_modules/highlight.js/styles/monokai-sublime.css', './build/slides/public/assets/vendors/reveal-js/lib/css/')
 
+    .copy('./src/slides/assets/images/', './build/slides/public/assets/images')
+
     .browserSync({
       files: [
         './build/exemplos/**/**.html',

@@ -5,7 +5,7 @@
   <title>Slides da Apresentação sobre Flexbox</title>
 
   <link rel="stylesheet" href="./public/assets/vendors/reveal-js/css/reveal.css">
-  <link rel="stylesheet" href="./public/assets/vendors/reveal-js/css/theme/black.css">
+  <link rel="stylesheet" href="./public/assets/vendors/reveal-js/css/theme/solarized.css">
 
   <link rel="stylesheet" href="./public/assets/vendors/reveal-js/lib/css/monokai-sublime.css">
 
@@ -15,7 +15,385 @@
 
 <div class="reveal">
   <div class="slides">
-    <section>Slide 1</section>
+    <section>
+      <h1>
+        CSS FLEXBOX
+      </h1>
+
+      <h3>
+        E o que ele pode fazer por nós
+      </h3>
+    </section>
+
+    <section>
+      <section>
+        <h2>Display: block;</h2>
+
+        <span>O que é o display block?</span>
+      </section>
+
+      <section>
+        <blockquote>
+          display é a propriedade mais importante do CSS para controlar o layout. Cada elemento tem um valor padrão para o display dependendo de seu tipo. O valor padrão na maioria dos elementos é normalmente block ou inline . Um elemento com valor block é chamado de elemento de nível de bloco ou apenas elemento de bloco.
+        </blockquote>
+      </section>
+
+      <section>
+        <h2>
+          Mas o que isso significa realmente?
+        </h2>
+      </section>
+
+      <section class="exemplo-div-bloco">
+        <h3>
+          Exemplo de elementos em bloco
+        </h3>
+
+        <div>Primeira Div</div>
+        <div>Segunda Div</div>
+        <div>Terceira Div</div>
+
+      </section>
+
+      <section>
+        <h3>Como colocar os 3 na mesma linha?</h3>
+      </section>
+
+      <section>
+        <h3>
+          Display: inline-block resolve
+        </h3>
+      </section>
+
+      <section class="exemplo-div-inline">
+        <h3>
+          Exemplo de elementos inline-block
+        </h3>
+
+        <div class="container-divs">
+          <div>Primeira Div</div>
+          <div>Segunda Div</div>
+          <div>Terceira Div</div>
+        </div>
+      </section>
+
+      <section>
+        <h3>
+          Resolvido, correto?
+        </h3>
+
+        <span>
+          Não, você prestou atenção no espaço entre os blocos?
+        </span>
+
+        <br>
+        <strong>Não?</strong>
+        <span>Vamos ver novamente</span>
+      </section>
+
+      <section class="exemplo-div-inline">
+        <div class="container-divs background">
+          <div>Primeira Div</div>
+          <div>Segunda Div</div>
+          <div>Terceira Div</div>
+        </div>
+      </section>
+
+      <section>
+        <h3>
+          Ok, então qual a solução?
+        </h3>
+      </section>
+    </section>
+
+    <section>
+      <section>
+        <h2>
+          Float a solução para seus problemas
+        </h2>
+      </section>
+
+      <section>
+        <h3>
+          Como o float funciona?
+        </h3>
+      </section>
+
+      <section>
+        <blockquote>
+          Float é uma propriedade CSS que usamos para posicionar algo na tela, seja um elemento em bloco ou em linha. Com a propriedade float definida, um elemento pode ser empurrado para esquerda ou para a direita, permitindo que os outros elementos possam organizar em torno dele.
+        </blockquote>
+      </section>
+
+      <section>
+        <h3>
+          Simple não é?
+        </h3>
+
+        <span>É o que veremos</span>
+      </section>
+
+      <!--<section data-background-image="http://www.reactiongifs.com/wp-content/uploads/2013/09/evil-laugh.gif" data-background-size="cover">-->
+      <!--</section>-->
+
+      <section data-background-image="./public/assets/images/css.gif" data-background-size="cover">
+        <h2 class="texto-contraste-branco">
+          Float e o bug do clearfix
+        </h2>
+
+        <br>
+
+        <span class="texto-contraste-branco">Quem nunca passou por isso?</span>
+      </section>
+
+      <section>
+        <h3>
+          O que é esse bug?
+        </h3>
+      </section>
+
+      <section>
+        <p>
+          Quando nós utilizamos a propriedade <strong>float</strong>, nós estamos flutuando
+          o elemento a direita ou a esquerda dos outros e devido a isso o bloco sai do
+          fluxo do html o que acaba gerando um "buraco" na marcação.
+        </p>
+
+        <p>
+          E consecutivamente o elemento pai não consegue calcular sua altura corretamente.
+        </p>
+      </section>
+
+      <section>
+        <h3>
+          Como evitar o bug do clearfix?
+        </h3>
+      </section>
+
+      <section>
+        <h1>
+          Não usando float
+        </h1>
+      </section>
+
+      <section>
+        <h3>
+          Então qual a solução?
+        </h3>
+      </section>
+    </section>
+
+    <section>
+
+      <section>
+        <h3>
+          Flexible Content (para os intímos, flexbox)
+        </h3>
+      </section>
+
+      <section>
+        <h3>
+          O que é o flexbox?
+        </h3>
+      </section>
+
+      <section>
+        <blockquote>
+          O CSS Flexible Box Layout Model ou simplesmente Flexbox faz parte da especificação do CSS3 que promete organizar elementos na página previsivelmente quando o layout precisa ser visualizado em diversos tamanhos de tela e em diversos dispositivos.
+        </blockquote>
+      </section>
+
+      <section>
+        <p>
+          A única observação é que o flexbox <strong>NÃO</strong> é suportado por todos os browsers
+        </p>
+
+        <p>
+          Ele só roda apartir do <strong>IE11</strong> (e com alguns bugs)
+        </p>
+      </section>
+
+      <section data-background-image="./public/assets/images/homer-puto.gif" data-background-size="cover">
+        <h3 class="texto-contraste-branco">
+          Porque a vida tem de ser tão difícil?
+        </h3>
+      </section>
+
+      <section>
+        <h3>Qual a solução?</h3>
+      </section>
+
+      <section data-background-image="http://nelson-haha.api-meal.eu/nelson.png" data-background-size="cover">
+        <p class="texto-contraste-branco">
+          Usar o Google Chrome
+        </p>
+      </section>
+
+      <section>
+        <p>
+          Caso os seus usuários não utilizem mais o IE8 ~ IE10 você já pode usar o flexbox.
+        </p>
+
+        <p>
+          Mas caso seus clientes ainda utilizem os IEs antigos, você pode força-los a atualizar ou mudar
+          de navegador para poder acessar o site.
+        </p>
+      </section>
+
+      <section>
+        <h3>
+          Isso é certo? O que vocês acham?
+        </h3>
+      </section>
+    </section>
+
+    <section>
+      <section>
+        <h2>Mergulhando no flexbox</h2>
+      </section>
+
+      <section>
+        <h3>Propriedades do flexbox</h3>
+      </section>
+    </section>
+
+    <section>
+      <section>
+        <h1>
+          Flex container
+        </h1>
+      </section>
+
+      <section>
+        <h4>display</h4>
+      <pre><code data-trim>
+.container {
+  display: flex; /* or inline-flex */
+}
+      </code></pre>
+      </section>
+
+      <section>
+        <h4>flex-direction</h4>
+      <pre><code data-trim>
+.container {
+  flex-direction: row | row-reverse | column | column-reverse;
+}
+      </code></pre>
+      </section>
+
+      <section>
+        <h4>flex-wrap</h4>
+      <pre><code data-trim>
+.container{
+  flex-wrap: nowrap | wrap | wrap-reverse;
+}
+      </code></pre>
+      </section>
+
+      <section>
+        <h4>justify-content</h4>
+      <pre><code data-trim>
+.container {
+  justify-content: flex-start | flex-end | center | space-between | space-around;
+}
+      </code></pre>
+      </section>
+
+      <section>
+        <h4>align-items</h4>
+      <pre><code data-trim>
+.container {
+  align-items: flex-start | flex-end | center | baseline | stretch;
+}
+      </code></pre>
+      </section>
+
+      <section>
+        <h4>align-content</h4>
+      <pre><code data-trim>
+.container {
+  align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+}
+      </code></pre>
+      </section>
+    </section>
+
+    <section>
+      <section>
+        <h1>
+          Flex Items
+        </h1>
+      </section>
+
+      <section>
+        <h4>order</h4>
+
+      <pre><code data-trim>
+.item {
+  order: integer;
+}
+      </code></pre>
+      </section>
+
+      <section>
+        <h4>flex-grow</h4>
+
+      <pre><code data-trim>
+.item {
+  flex-grow: number; /* default 0 */
+}
+      </code></pre>
+      </section>
+
+      <section>
+        <h4>flex-shrink</h4>
+
+      <pre><code data-trim>
+.item {
+  flex-shrink: number; /* default 1 */
+}
+      </code></pre>
+      </section>
+
+      <section>
+        <h4>flex-basis</h4>
+
+      <pre><code data-trim>
+.item {
+  flex-basis: length | auto; /* default auto */
+}
+      </code></pre>
+      </section>
+
+      <section>
+        <h4>flex</h4>
+
+      <pre><code data-trim>
+.item {
+  flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
+}
+      </code></pre>
+      </section>
+
+      <section>
+        <h4>align-self</h4>
+
+      <pre><code data-trim>
+.item {
+  align-self: auto | flex-start | flex-end | center | baseline | stretch;
+}
+      </code></pre>
+      </section>
+
+    </section>
+
+    <section>
+      <h1>
+        Vamos aos exemplos
+      </h1>
+    </section>
+
   </div>
 </div>
 
