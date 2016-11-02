@@ -61,6 +61,8 @@ elixir(function(mix) {
 
     .copy('./src/slides/assets/images/', './build/slides/public/assets/images')
 
+    .copy('./src/exemplos/assets/images/', './build/exemplos/public/assets/images')
+
     .browserSync({
       files: [
         './build/exemplos/**/**.html',
