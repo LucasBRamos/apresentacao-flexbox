@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/LucasBRamos/apresentacao-flexbox#readme",
   "devDependencies": {
+    "bourbon": "^4.2.7",
     "gulp": "^3.9.1",
     "gulp-rsync": "0.0.6",
     "gulp-shell": "^0.5.2",
